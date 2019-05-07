@@ -1,1 +1,3 @@
 # mycode
+
+Learning about git.
