@@ -1,0 +1,18 @@
+---
+- name: How to prompt for variables
+  hosts: localhost
+  gather_facts: no
+
+  vars_prompt:
+    - name: "yourpasswordvar"
+      prompt: "What is your password? "
+      private: yes  ## Does not echo your password
+      encrypt: "sha512_crypt"
+      confirm: yes
+      default: "qwerty"
+
+  tasks:
+          - name: show the results
+            debug:
+                    var: yourpasswordvar
+
