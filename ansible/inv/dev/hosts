@@ -5,4 +5,7 @@ bender ansible_host=10.10.2.3 ansible_ssh_user=bender
 zoidberg ansible_host=10.10.2.5 ansible_ssh_user=zoidberg
 
 [planet-express:vars]
-engines=darkmatter
+enginetype=darkmatter
+weapontype="rubber chicken"
+pecargo=pizza
+shipprice=222220000000000
