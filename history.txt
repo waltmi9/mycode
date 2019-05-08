@@ -1,0 +1,251 @@
+    1  pwd
+    2  clear
+    3  mkdir mycode;mkdir ansible
+    4  pwd
+    5  ls
+    6  rm -rf ansible
+    7  cd mycode/
+    8  mkdir ansible
+    9  ls
+   10  clear
+   11  touch playbook001.yml
+   12  ls -ltr
+   13  mv playbook001.yml ~/mycode/ansible/
+   14  pwd
+   15  cd ansible/
+   16  ls
+   17  clear
+   18  ls
+   19  vim playbook001.yml 
+   20  ansible-playbook playbook001.yml 
+   21  vi playbook001.yml 
+   22  ansible-playbook playbook001.yml 
+   23  bastet
+   24  ansible-playbook playbook001.yml 
+   25  history
+   26  clear
+   27  vim playbook02-prompt.yml
+   28  ansible-playbook playbook02-prompt.yml 
+   29  vim playbook02-prompt.yml
+   30  cd ~
+   31  pwd
+   32  clear
+   33  ls
+   34  ls -ltr
+   35  cd Music/
+   36  ls
+   37  cd ..
+   38  clear
+   39  uname -a
+   40  clear
+   41  apt get git
+   42  apt-get git
+   43  clear
+   44  git config --global user
+   45  git config --global user.name "waldo"
+   46  pwd
+   47  cd mycode/
+   48  git config --global user.name "waldo"
+   49  git config --global user.email "michael.walterman@vzw.com"
+   50  git init
+   51  git pull https://github.com/rzfeeser/mycode.git
+   52  pwd
+   53  ls
+   54  git pull https://github.com/waltmi9/mycode.git
+   55  ls
+   56  git add *
+   57  git commit -m "my commit"
+   58  git push https://github.com/waltmi9/mycode master
+   59  ls
+   60  exit
+   61  cd mycode/ansible/
+   62  ls
+   63  vim playbook03-hosts.yml
+   64  ansible -m module-setup >> nohup.out
+   65  ansible-playbook playbook03-hosts.yml 
+   66  mkdir inv
+   67  cd inv
+   68  ls
+   69  mkdir dev
+   70  mkdir prod
+   71  cd dev
+   72  vim hosts
+   73  cd ~
+   74  pw
+   75  pwd
+   76  cd mycode/ansible/
+   77  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+   78  pwd
+   79  ls
+   80  cd inv/
+   81  ls
+   82  cd dev/
+   83  ls
+   84  vi hosts
+   85  cd ../..
+   86  pwd
+   87  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+   88  clear
+   89  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+   90  pwd
+   91  ls
+   92  vi playbook03-hosts.yml 
+   93  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+   94  vim playbook03-hosts.yml 
+   95  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+   96  vim playbook03-hosts.yml 
+   97  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+   98  vim playbook03-hosts.yml 
+   99  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  100  vim playbook03-hosts.yml 
+  101  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  102  vim playbook03-hosts.yml 
+  103  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  104  vi playbook03-hosts.
+  105  vi playbook03-hosts.yml 
+  106  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  107  ssh fry
+  108  ssh bender@bender
+  109  ssh bender@10.10.2.3
+  110  vi playbook03-hosts.yml 
+  111  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  112  cd /etc
+  113  ls -la | grep -i .ssh
+  114  cd ssh
+  115  ls
+  116  ls -la | grep -i .ssh
+  117  clear
+  118  cd ~/mycode/ansible/
+  119  ls
+  120  history
+  121  vi playbook03-hosts.yml 
+  122  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  123  vim inv/dev/hosts 
+  124  vi playbook03-hosts.yml 
+  125  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  126  vi playbook03-hosts.yml 
+  127  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  128  history | grep -i git
+  129  vi playbook03-hosts.yml 
+  130  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts
+  131  vi playbook03-hosts.yml 
+  132  ansible-playbook playbook03-hosts.yml -i inv/dev/hosts -e engines=ion
+  133  vim ansible.cfg
+  134  ansible-playbook playbook03-hosts.yml 
+  135  pwd
+  136  ls
+  137  cat playbook03-hosts.retry 
+  138  ls
+  139  rm playbook03-hosts.retry 
+  140  ls -ltr
+  141  ansible-playbook playbook03-hosts.yml 
+  142  ls
+  143  ansible -m shell uptime
+  144  ansible -m shell -a uptime
+  145  ansible -m shell -a "uptime"
+  146  ansible -m shell -a "uptime" all
+  147  history >> nohup.out
+  148  cat nohup.out
+  149  ansible -m shell -a "uptime" all >> nohup.out.2
+  150  ls
+  151  cat nohup.out.2 
+  152  rm -rf nohup.out*
+  153  ls
+  154  clear
+  155  cd .ssh
+  156  cd 
+  157  cd .ssh
+  158  ls
+  159  cat config 
+  160  cd 
+  161  cd mycode/ansible/
+  162  ls
+  163  vim playbook04-api.yml
+  164  ansible-playbook playbook04-api.yml 
+  165  vim playbook04-api.yml
+  166  ansible-playbook playbook04-api.yml 
+  167  vim playbook04-api.yml
+  168  ansible-playbook playbook04-api.yml 
+  169  vim playbook04-api.yml
+  170  ansible-playbook playbook04-api.yml 
+  171  vim playbook04-api.yml
+  172  ansible-playbook playbook04-api.yml 
+  173  history | grep git
+  174  cd ..
+  175  git add *
+  176  git commit -m "my commit"
+  177  git commit -m " new playbooks to be added "
+  178  git push https://github.com/waltmi9/mycode master
+  179  cd python
+  180  ls
+  181  cd ..
+  182  ls
+  183  find / -name "python3" | less
+  184  cd mycode/
+  185  mkdir python
+  186  cd python/
+  187  ls
+  188  vim randomgame.py
+  189  python3 randomgame.py 
+  190  vim randomgame.py
+  191  python3 randomgame.py 
+  192  vim randomgame.py
+  193  python3 randomgame.py 
+  194  vim randomgame.py
+  195  python3 randomgame.py 
+  196  vim randomgame.py
+  197  python3 randomgame.py 
+  198  vim randomgame.py
+  199  python3 randomgame.py 
+  200  python3 -m install requests
+  201  python3 -m install request
+  202  python3 -m pip install request
+  203  which python3
+  204  python3 --version
+  205  python3 -m pip install -r requirements.txt
+  206  python3 -m pip freeze > requirements.txt
+  207  python3 -m pip install -r requirements.txt
+  208  pwd
+  209  cd ../ansible/
+  210  clear
+  211  vim playbook05-template.yml'
+  212  vim playbook05-template.yml
+  213  mkdir template
+  214  vim template/ship.conf.j2
+  215  who
+  216  finger
+  217  vim template/ship.conf.j2
+  218  vim playbook05-template.yml
+  219  vim playbook04
+  220  vim playbook04-api.yml 
+  221  vim playbook05-template.yml
+  222  vim inv/dev/hosts 
+  223  ansible-playbook playbook05-template.yml 
+  224  vim inv/dev/hosts 
+  225  ansible-playbook playbook05-template.yml 
+  226  --limit @/home/student/mycode/ansible/playbook05-template.retry
+  227  vim inv/dev/hosts 
+  228  ansible-playbook playbook05-template.yml 
+  229  vim inv/dev/hosts 
+  230  pwd
+  231  history
+  232  vim template/ship.conf.j2
+  233  vim inv/dev/hosts 
+  234  ansible-playbook playbook05-template.yml 
+  235  ansible-playbook playbook05-template.yml -e shipprice=50000
+  236  vim inv/dev/hosts 
+  237  ansible-playbook playbook05-template.yml -e shipprice=50000
+  238  ansible-playbook playbook05-template.yml
+  239  history | grep -i git
+  240  git add *
+  241  git commit -m "3rd day of class"
+  242  git push https://github.com/waltmi9/mycode master
+  243  cd ~
+  244  git add *
+  245  pwd
+  246  ls
+  247  cd mycode/
+  248  git add *
+  249  git commit -m "3rd day of class more files"
+  250  git push https://github.com/waltmi9/mycode master
+  251  history > history.txt
