@@ -1,0 +1,68 @@
+---
+- name: A few basic filters
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+          jarlist: [1,1,1,1,1,5]
+          repeatlist: [1,2,2,2,4,4,4,4,9,9,9,9]
+          repeat2list: [5,5,5,5,5,6,7]
+          complexlist: [6,7,8,9,[10,22,55],87]
+          test_list:
+                  - '10.168.2.1'
+                  - '10.0.0.1'
+                  - 'host.example.org'
+                  - 'fe80::100/10'
+                  - True
+                  - 'Witcher3 The Wild Hunt'
+                  - 'Earl Grey tea, hot'
+          mytest_string: 'ncc1701 uss enterprise'
+          myaddresses: ['192.168.2.201', '10.0.3.50', '171.172.32.1']
+
+  tasks:
+          - name: the min filter
+            debug:
+                    msg: "show me the largest number in the list: '{{ jarlist|min }}'"
+
+          - name: the flaten filter
+            debug:
+                    msg: "flatten a list: '{{ complexlist|flatten }}'"
+
+          - name: Grab the unique set from a list
+            debug:
+                    msg: "this diffs are: '{{ repeatlist|unique }}'"
+
+          - name: Show the diffs of two lists
+            debug:
+                    msg: "the diffs are: '{{ repeatlist|difference(repeat2list) }}'"
+
+
+          - name: snooze our ansible script
+            debug:
+                    msg: "{{ sleeptime|default(10) }}"
+
+          - name: I just want IP addresses
+            debug:
+                    msg: "{{test_list|ipaddr}}"
+
+          - name: spwan a mac
+            debug: 
+                    msg: "{{'52:54:00' | random_mac }}"
+
+          - name: test if a variable ends in prise
+            debug:
+                    msg: "ahhhh but is it A B C or D???"
+            when: mytest_string.endswith('prise')
+
+          - name: show capitalization with Jinja
+            debug:
+                    var: mytest_string | capitalize
+
+          - name: show capitalization with python
+            debug:
+                    var: mytest_string | capitalize()
+
+          - name: show addresses thart match our scope
+            debug:
+                    msg: "{{ (myaddresses|ipaddr('10.0.0.0/8'))[0].split('.')[3] }}" 
+
