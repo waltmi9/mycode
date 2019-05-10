@@ -1,0 +1,13 @@
+---
+- name: make ansible run a script
+  hosts: localhost
+
+  tasks:
+          - script: /home/student/pyhello2.py
+            args:
+                    executable: python3
+                    creates: /home/student/mycode/ansible/stopper.txt
+            register: results
+
+          - debug:
+                  var: results

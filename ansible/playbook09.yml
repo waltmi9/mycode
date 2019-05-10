@@ -1,0 +1,9 @@
+---
+- name: My Custom module
+  hosts: localhost
+
+  tasks:
+          - name: Our Custom module
+            my_vzw_mod:
+                    name: Mike Walterman
+                    new: False
